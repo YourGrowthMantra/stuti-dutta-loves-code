@@ -21,7 +21,7 @@ const Footer = () => {
               href="https://linkedin.com/in/stutidutto08" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-accent transition-colors footer-social-icon"
+              className="text-muted-foreground hover:text-accent transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin size={24} />
@@ -30,14 +30,14 @@ const Footer = () => {
               href="https://github.com/Stutidutto" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-accent transition-colors footer-social-icon"
+              className="text-muted-foreground hover:text-accent transition-colors"
               aria-label="GitHub"
             >
               <Github size={24} />
             </a>
             <a 
               href="mailto:stutidutto@gmail.com" 
-              className="text-muted-foreground hover:text-accent transition-colors footer-social-icon"
+              className="text-muted-foreground hover:text-accent transition-colors"
               aria-label="Email"
             >
               <Mail size={24} />

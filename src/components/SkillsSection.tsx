@@ -1,41 +1,40 @@
 
 import React from 'react';
 import { Code, FileCode, Database, Laptop, Server, Brain } from 'lucide-react';
-import { HoverCard, HoverCardTrigger, HoverCardContent } from "@/components/ui/hover-card";
 
 const SkillsSection = () => {
   const skills = [
     {
       category: "Programming",
       items: [
-        { name: "JavaScript", icon: <Code className="mb-2" size={32} />, description: "Proficient in ES6+ features, async programming, and DOM manipulation" },
-        { name: "Python", icon: <Code className="mb-2" size={32} />, description: "Experience with data processing, Flask, and machine learning libraries" },
-        { name: "Java", icon: <Code className="mb-2" size={32} />, description: "Object-oriented programming and Android development" },
-        { name: "C/C++", icon: <Code className="mb-2" size={32} />, description: "Low-level systems programming and data structures" }
+        { name: "JavaScript", icon: <Code className="mb-2" size={32} /> },
+        { name: "Python", icon: <Code className="mb-2" size={32} /> },
+        { name: "Java", icon: <Code className="mb-2" size={32} /> },
+        { name: "C/C++", icon: <Code className="mb-2" size={32} /> }
       ]
     },
     {
       category: "Web Development",
       items: [
-        { name: "HTML", icon: <FileCode className="mb-2" size={32} />, description: "Semantic markup, accessibility, and SEO best practices" },
-        { name: "CSS", icon: <FileCode className="mb-2" size={32} />, description: "Responsive layouts, animations, and CSS frameworks" },
-        { name: "JavaScript", icon: <FileCode className="mb-2" size={32} />, description: "Frontend interactivity and modern frameworks" },
-        { name: "Django", icon: <Server className="mb-2" size={32} />, description: "Full-stack Python web development" },
-        { name: "Bootstrap", icon: <Laptop className="mb-2" size={32} />, description: "Responsive UI components and grid system" },
-        { name: "jQuery", icon: <Laptop className="mb-2" size={32} />, description: "DOM manipulation and AJAX requests" }
+        { name: "HTML", icon: <FileCode className="mb-2" size={32} /> },
+        { name: "CSS", icon: <FileCode className="mb-2" size={32} /> },
+        { name: "JavaScript", icon: <FileCode className="mb-2" size={32} /> },
+        { name: "Django", icon: <Server className="mb-2" size={32} /> },
+        { name: "Bootstrap", icon: <Laptop className="mb-2" size={32} /> },
+        { name: "jQuery", icon: <Laptop className="mb-2" size={32} /> }
       ]
     },
     {
       category: "Technologies",
       items: [
-        { name: "Microsoft Dynamics 365", icon: <Laptop className="mb-2" size={32} />, description: "ERP/CRM implementation and customization" },
-        { name: "SQL", icon: <Database className="mb-2" size={32} />, description: "Database design, querying, and optimization" }
+        { name: "Microsoft Dynamics 365", icon: <Laptop className="mb-2" size={32} /> },
+        { name: "SQL", icon: <Database className="mb-2" size={32} /> }
       ]
     },
     {
       category: "Other",
       items: [
-        { name: "Machine Learning", icon: <Brain className="mb-2" size={32} />, description: "Classification models, neural networks, and predictive analytics" }
+        { name: "Machine Learning", icon: <Brain className="mb-2" size={32} /> }
       ]
     }
   ];
@@ -51,24 +50,10 @@ const SkillsSection = () => {
               <h3 className="text-2xl font-heading mb-6 text-accent">{skillGroup.category}</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {skillGroup.items.map((skill, idx) => (
-                  <HoverCard key={idx}>
-                    <HoverCardTrigger asChild>
-                      <div className="skill-icon flex flex-col items-center justify-center p-4 rounded-lg cursor-pointer">
-                        {skill.icon}
-                        <span className="text-sm text-center">{skill.name}</span>
-                      </div>
-                    </HoverCardTrigger>
-                    <HoverCardContent className="w-80 bg-card border-accent">
-                      <div className="flex justify-between space-x-4">
-                        <div className="space-y-1">
-                          <h4 className="text-sm font-semibold">{skill.name}</h4>
-                          <p className="text-sm text-muted-foreground">
-                            {skill.description}
-                          </p>
-                        </div>
-                      </div>
-                    </HoverCardContent>
-                  </HoverCard>
+                  <div key={idx} className="skill-icon flex flex-col items-center">
+                    {skill.icon}
+                    <span className="text-sm">{skill.name}</span>
+                  </div>
                 ))}
               </div>
             </div>
