@@ -45,11 +45,8 @@ export const DownloadButton = ({ showCounter = false, className = "" }: Download
 
       // Create a temporary link element
       const link = document.createElement('a');
-      // Use Cloudinary's raw delivery URL for PDF
-      link.href = 'https://res.cloudinary.com/djhujkmpp/raw/upload/v1744659439/StutiDutta_h48ssd.pdf';
+      link.href = '/StutiDutta.pdf';
       link.download = 'StutiDutta_Resume.pdf';
-      link.target = '_blank'; // Open in new tab
-      link.rel = 'noopener noreferrer'; // Security best practice
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
