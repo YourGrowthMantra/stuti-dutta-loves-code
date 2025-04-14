@@ -1,7 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
+import { DownloadButton } from "./DownloadButton";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +36,7 @@ const Navbar = () => {
               <li><a href="#projects" className="nav-link text-foreground hover:text-accent transition-colors">Projects</a></li>
               <li><a href="#experience" className="nav-link text-foreground hover:text-accent transition-colors">Experience</a></li>
               <li><a href="#contact" className="nav-link text-foreground hover:text-accent transition-colors">Contact</a></li>
-              <li><a href="#" className="btn-outline">Resume</a></li>
+              <li><DownloadButton resumeUrl="/resume.pdf" initialCount={17} /></li>
             </ul>
           </nav>
           
@@ -58,7 +58,7 @@ const Navbar = () => {
             <li><a href="#projects" className="text-xl text-foreground hover:text-accent" onClick={toggleMenu}>Projects</a></li>
             <li><a href="#experience" className="text-xl text-foreground hover:text-accent" onClick={toggleMenu}>Experience</a></li>
             <li><a href="#contact" className="text-xl text-foreground hover:text-accent" onClick={toggleMenu}>Contact</a></li>
-            <li><a href="#" className="btn-outline text-xl" onClick={toggleMenu}>Resume</a></li>
+            <li><DownloadButton resumeUrl="/resume.pdf" initialCount={17} /></li>
           </ul>
         </nav>
       </div>

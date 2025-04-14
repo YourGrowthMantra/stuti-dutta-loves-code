@@ -1,5 +1,5 @@
-
 import React, { useEffect, useRef } from 'react';
+import { DownloadButton } from "./DownloadButton";
 
 const HeroSection = () => {
   const particlesRef = useRef<HTMLDivElement>(null);
@@ -73,9 +73,7 @@ const HeroSection = () => {
             <a href="#projects" className="btn-primary w-full sm:w-auto">
               Explore My Work
             </a>
-            <a href="#" className="btn-outline w-full sm:w-auto">
-              Download Resume
-            </a>
+            <DownloadButton resumeUrl="/resume.pdf" />
           </div>
         </div>
       </div>
