@@ -57,7 +57,7 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <div 
               key={project.id} 
-              className="project-card animate-fade-up opacity-0" 
+              className="project-card rounded-xl overflow-hidden bg-card animate-fade-up opacity-0" 
               style={{ animationDelay: `${0.2 * index}s`, animationFillMode: 'forwards' }}
               onClick={() => setSelectedProject(project)}
             >
@@ -65,7 +65,7 @@ const ProjectsSection = () => {
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="object-cover w-full h-full transition-transform duration-500 hover:scale-110"
+                  className="object-cover w-full h-full transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end">
                   <div className="p-4">
@@ -80,13 +80,17 @@ const ProjectsSection = () => {
                 <p className="text-muted-foreground mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, idx) => (
-                    <span key={idx} className="text-xs px-2 py-1 bg-muted rounded-full">{tag}</span>
+                    <span key={idx} className="text-xs px-2 py-1 bg-muted rounded-full tag-hover">{tag}</span>
                   ))}
                 </div>
                 <button 
-                  className="text-accent hover:text-accent/80 font-medium flex items-center gap-2"
+                  className="text-accent hover:text-accent/80 font-medium flex items-center gap-2 group"
                 >
-                  View Details <ExternalLink size={16} />
+                  <span className="relative">
+                    View Details
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent group-hover:w-full transition-all duration-300"></span>
+                  </span>
+                  <ExternalLink size={16} className="transform group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
               </div>
             </div>
@@ -116,7 +120,7 @@ const ProjectsSection = () => {
               </DialogDescription>
               <div className="flex flex-wrap gap-2 my-4">
                 {selectedProject.tags.map((tag, idx) => (
-                  <span key={idx} className="text-xs px-2 py-1 bg-muted rounded-full">{tag}</span>
+                  <span key={idx} className="text-xs px-2 py-1 bg-muted rounded-full tag-hover">{tag}</span>
                 ))}
               </div>
               <div className="flex gap-4 mt-6">
@@ -124,17 +128,19 @@ const ProjectsSection = () => {
                   href={selectedProject.links.demo} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="btn-primary flex items-center gap-2"
+                  className="btn-primary flex items-center gap-2 group"
                 >
-                  Live Demo <ExternalLink size={16} />
+                  Live Demo 
+                  <ExternalLink size={16} className="transform group-hover:translate-x-1 transition-transform duration-300" />
                 </a>
                 <a 
                   href={selectedProject.links.github} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="btn-outline flex items-center gap-2"
+                  className="btn-outline flex items-center gap-2 group"
                 >
-                  GitHub <Github size={16} />
+                  GitHub 
+                  <Github size={16} className="transform group-hover:rotate-12 transition-transform duration-300" />
                 </a>
               </div>
             </>
