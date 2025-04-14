@@ -45,7 +45,7 @@ export const DownloadButton = ({ showCounter = false, className = "" }: Download
 
       // Create a temporary link element
       const link = document.createElement('a');
-      link.href = '/StutiDutta.pdf';  // Updated to match the actual filename
+      link.href = 'https://res.cloudinary.com/djhujkmpp/image/upload/v1744659439/StutiDutta_h48ssd.pdf';
       link.download = 'StutiDutta_Resume.pdf';
       document.body.appendChild(link);
       link.click();
@@ -69,7 +69,7 @@ export const DownloadButton = ({ showCounter = false, className = "" }: Download
       Download Resume
       {showCounter && (
         <motion.span
-          className="absolute -right-2 -top-2 bg-accent text-accent-foreground text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center"
+          className="absolute right-0 top-0 -translate-y-1/2 translate-x-1/2 bg-accent text-accent-foreground text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center"
           animate={{
             scale: isAnimating ? [1, 1.2, 1] : 1,
             rotate: isAnimating ? [0, 10, -10, 0] : 0,
