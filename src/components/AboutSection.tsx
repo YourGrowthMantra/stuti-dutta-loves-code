@@ -21,28 +21,28 @@ const AboutSection = () => {
           
           <div className="lg:order-1">
             <h2 className="section-title">About Me</h2>
-            <p className="text-lg mb-6 text-muted-foreground">
+            <p className="text-lg mb-6 text-muted-foreground animate-fade-up opacity-0" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
               I'm a B.Tech graduate in Computer Science (8.27 CGPA) with a passion for frontend development and UX/UI design. 
               Proficient in JavaScript, HTML, CSS, and frameworks like Bootstrap and jQuery, I create intuitive, 
               performance-optimized solutions.
             </p>
-            <p className="text-lg mb-6 text-muted-foreground">
+            <p className="text-lg mb-6 text-muted-foreground animate-fade-up opacity-0" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
               My experience spans Microsoft Dynamics 365, machine learning projects, and responsive web apps. 
               I'm dedicated to creating beautiful, functional interfaces that deliver exceptional user experiences.
             </p>
-            <p className="text-lg mb-8 text-muted-foreground">
+            <p className="text-lg mb-8 text-muted-foreground animate-fade-up opacity-0" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
               When I'm not coding, I'm sketching wireframes or exploring new design trends to stay at the cutting edge of UX/UI development.
             </p>
             
-            <div className="flex flex-wrap gap-4">
-              <div className="bg-muted px-4 py-2 rounded-full text-sm">JavaScript</div>
-              <div className="bg-muted px-4 py-2 rounded-full text-sm">HTML</div>
-              <div className="bg-muted px-4 py-2 rounded-full text-sm">CSS</div>
-              <div className="bg-muted px-4 py-2 rounded-full text-sm">React</div>
-              <div className="bg-muted px-4 py-2 rounded-full text-sm">Bootstrap</div>
-              <div className="bg-muted px-4 py-2 rounded-full text-sm">jQuery</div>
-              <div className="bg-muted px-4 py-2 rounded-full text-sm">Responsive Design</div>
-              <div className="bg-muted px-4 py-2 rounded-full text-sm">UX/UI</div>
+            <div className="flex flex-wrap gap-4 animate-fade-up opacity-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
+              <div className="bg-muted px-4 py-2 rounded-full text-sm hover:bg-accent hover:text-accent-foreground transition-colors">JavaScript</div>
+              <div className="bg-muted px-4 py-2 rounded-full text-sm hover:bg-accent hover:text-accent-foreground transition-colors">HTML</div>
+              <div className="bg-muted px-4 py-2 rounded-full text-sm hover:bg-accent hover:text-accent-foreground transition-colors">CSS</div>
+              <div className="bg-muted px-4 py-2 rounded-full text-sm hover:bg-accent hover:text-accent-foreground transition-colors">React</div>
+              <div className="bg-muted px-4 py-2 rounded-full text-sm hover:bg-accent hover:text-accent-foreground transition-colors">Bootstrap</div>
+              <div className="bg-muted px-4 py-2 rounded-full text-sm hover:bg-accent hover:text-accent-foreground transition-colors">jQuery</div>
+              <div className="bg-muted px-4 py-2 rounded-full text-sm hover:bg-accent hover:text-accent-foreground transition-colors">Responsive Design</div>
+              <div className="bg-muted px-4 py-2 rounded-full text-sm hover:bg-accent hover:text-accent-foreground transition-colors">UX/UI</div>
             </div>
           </div>
         </div>

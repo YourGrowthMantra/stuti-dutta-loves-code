@@ -31,11 +31,11 @@ const Navbar = () => {
           
           <nav className="hidden md:block">
             <ul className="flex items-center space-x-8">
-              <li><a href="#about" className="text-foreground hover:text-accent transition-colors">About</a></li>
-              <li><a href="#skills" className="text-foreground hover:text-accent transition-colors">Skills</a></li>
-              <li><a href="#projects" className="text-foreground hover:text-accent transition-colors">Projects</a></li>
-              <li><a href="#experience" className="text-foreground hover:text-accent transition-colors">Experience</a></li>
-              <li><a href="#contact" className="text-foreground hover:text-accent transition-colors">Contact</a></li>
+              <li><a href="#about" className="nav-link text-foreground hover:text-accent transition-colors">About</a></li>
+              <li><a href="#skills" className="nav-link text-foreground hover:text-accent transition-colors">Skills</a></li>
+              <li><a href="#projects" className="nav-link text-foreground hover:text-accent transition-colors">Projects</a></li>
+              <li><a href="#experience" className="nav-link text-foreground hover:text-accent transition-colors">Experience</a></li>
+              <li><a href="#contact" className="nav-link text-foreground hover:text-accent transition-colors">Contact</a></li>
               <li><a href="#" className="btn-outline">Resume</a></li>
             </ul>
           </nav>
