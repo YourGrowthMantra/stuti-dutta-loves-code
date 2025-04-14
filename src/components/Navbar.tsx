@@ -36,7 +36,7 @@ const Navbar = () => {
               <li><a href="#projects" className="nav-link text-foreground hover:text-accent transition-colors">Projects</a></li>
               <li><a href="#experience" className="nav-link text-foreground hover:text-accent transition-colors">Experience</a></li>
               <li><a href="#contact" className="nav-link text-foreground hover:text-accent transition-colors">Contact</a></li>
-              <li><DownloadButton resumeUrl="/resume.pdf" initialCount={17} /></li>
+              <li><DownloadButton showCounter={false} /></li>
             </ul>
           </nav>
           
@@ -58,7 +58,7 @@ const Navbar = () => {
             <li><a href="#projects" className="text-xl text-foreground hover:text-accent" onClick={toggleMenu}>Projects</a></li>
             <li><a href="#experience" className="text-xl text-foreground hover:text-accent" onClick={toggleMenu}>Experience</a></li>
             <li><a href="#contact" className="text-xl text-foreground hover:text-accent" onClick={toggleMenu}>Contact</a></li>
-            <li><DownloadButton resumeUrl="/resume.pdf" initialCount={17} /></li>
+            <li><DownloadButton showCounter={false} className="w-full" /></li>
           </ul>
         </nav>
       </div>

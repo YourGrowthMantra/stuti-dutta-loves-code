@@ -73,7 +73,7 @@ const HeroSection = () => {
             <a href="#projects" className="btn-primary w-full sm:w-auto">
               Explore My Work
             </a>
-            <DownloadButton resumeUrl="/resume.pdf" />
+            <DownloadButton showCounter={true} className="w-full sm:w-auto" />
           </div>
         </div>
       </div>
